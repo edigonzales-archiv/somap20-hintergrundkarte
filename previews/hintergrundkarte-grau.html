@@ -15,77 +15,60 @@
   <title>Hintergrundkarte WMS</title>
 </head>
 <body>
-  <div id="map" style="width: 500px"></div>
+  <div id="map" class="map"></div>
   <script type="text/javascript">
 
-  var resolutionModes = ['foo', 'bar']
-  var mode = getParameterByName('mode');
 
-  if (resolutionModes.indexOf(mode) < 0) {
-    mode = 'foo'
-  }
+    if (proj4) {
+        proj4.defs("EPSG:2056", "+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs");
+    }
 
-  var startZoom = null;
-  var mapResolutions = null;
+    var projection = ol.proj.get('EPSG:2056');
 
-  if (mode == 'foo') {
-    startZoom = 6;
-    mapResolutions = [4000,2000,1000,500,250,100,50,20,10,5,2.5,1.0,0.5,0.25,0.1,0.05];
-  } else {
-    startZoom = 18;
-    mapResolutions = [4000,3750,3500,3250,3000,2750,2500,2250,2000,1750,1500,1250,1000,750,650,500,250,100,50,20,10,5,2.5,2,1.5,1,0.5,0.25,0.1,0.05];
-  }
+    // We have to set the extent!
+    projection.setExtent([2420000, 130000, 2900000, 1350000]);
 
-  var imageFormat = "image/jpeg";
-
+/*
   var projection = new ol.proj.Projection({
     code: 'EPSG:2056',
     extent: [2420000, 1030000, 2900000, 1350000],
     units: 'm'
   });
+*/
+    var projectionExtent = projection.getExtent();
 
-  var projectionExtent = projection.getExtent();
 
-  var zoomLevels = 29;
-  var resolutions = [4000,3750,3500,3250,3000,2750,2500,2250,2000,1750,1500,1250,1000,750,650,500,250,100,50,20,10,5,2.5,2,1.5,1,0.5,0.25,0.1];
-  var matrixIds = new Array(resolutions.length);
-  var matrixSet = '21781';
-
-  for (var z = 0; z < zoomLevels; ++z) {
-    matrixIds[z] = z;
-  }
-
-  var layers = [
+    var layers = [
     new ol.layer.Image({
-      extent: [2420000, 1030000, 2900000, 1350000],
-      source: new ol.source.ImageWMS({
+        extent: [2420000, 1030000, 2900000, 1350000],
+        source: new ol.source.ImageWMS({
         url: 'http://35.158.123.43/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
         params: {'LAYERS': 'ch.so.agi.hintergrundkarte-grau'},
         ratio: 1
-      })
+        })
     })
-  ];
+    ];
 
-  var map = new ol.Map({
-    controls: ol.control.defaults().extend([
-      new ol.control.FullScreen()
-    ]),
-    ol3Logo: false,
-    target: document.getElementById('map'),
-    layers: layers,
-    view: new ol.View({
-      projection: projection,
-      center: [2618000, 1236700],
-      zoom: startZoom,
-      resolutions: mapResolutions
+    var map = new ol.Map({
+        controls: ol.control.defaults().extend([
+            new ol.control.FullScreen(),
+            new ol.control.ScaleLine()
+        ]),
+        units: 'm',
+        ol3Logo: false,
+        target: document.getElementById('map'),
+        layers: layers,
+        view: new ol.View({
+            projection: projection,
+            center: [2618000, 1236700],
+            zoom: 1,
+            //resolutions: [4000, 2000, 1000, 500, 250, 100, 50, 20, 10, 5, 2.5, 1, 0.5, 0.25, 0.1, 0.05] // eCH-0056
+            resolutions: [132.29166659990700, 79.37499995994430, 52.91666663996280, 39.68749997997210, 26.45833331998140, 19.84374999000010, 13.22916665999070, 10.58333332800380, 7.93749999598883, 6.61458333000935, 5.29166666400188, 3.96874999799441, 3.30729166499068, 2.64583333219974, 1.98437499989881, 1.32291666659827, 0.79374999959888, 0.66145833330054, 0.52916666669979, 0.39687499979944, 0.26458333329977, 0.19843749990000, 0.13229166669987, 0.07937499989997, 0.06614583330009, 0.05291666659998, 0.03968749989986, 0.02645833329999, 0.01322916670000] // Zug (nice scales)
 
-    })
-  });
+        })
+    });
 
-  function getParameterByName(name) {
-    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-  }
+
   </script>
 </body>
 </html>
