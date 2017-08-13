@@ -41,7 +41,7 @@ resource "aws_instance" "qgis-gis-server" {
 
   root_block_device {
     volume_type           = "gp2"
-    volume_size           = 16
+    volume_size           = 12
     delete_on_termination = true
   }
 
