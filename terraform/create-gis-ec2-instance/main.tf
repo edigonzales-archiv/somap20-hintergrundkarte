@@ -31,6 +31,13 @@ resource "aws_security_group" "allow_all" {
   }
 }
 
+# EBS volume must exist.
+resource "aws_volume_attachment" "ebs_att" {
+  device_name = "/dev/sdg"
+  volume_id   = "vol-01a63e9115f061d94"
+  instance_id = "${aws_instance.qgis-gis-server.id}"
+}
+
 resource "aws_instance" "qgis-gis-server" {
   availability_zone = "eu-central-1a"    
   ami = "ami-1e339e71" 
