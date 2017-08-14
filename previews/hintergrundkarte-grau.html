@@ -65,7 +65,7 @@
             extent: [2420000, 1030000, 2900000, 1350000],
             source: new ol.source.TileWMS({
                 url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
-                hidpi: false,
+                hidpi: true,
                 params: {'LAYERS': 'ch.so.agi.hintergrundkarte-grau', 'TILED': true},
                 serverType: 'qgis'
             })
