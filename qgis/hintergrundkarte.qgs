@@ -3,9 +3,9 @@
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
-  <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
+  <layer-tree-group expanded="1" checked="Qt::Unchecked" name="">
     <customproperties/>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="ch.so.agi.hintergrundkarte-grau">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-grau">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="kgrs100020170813153019438" source="/opt/geodata/ch.swisstopo.lk1000.grau/kgrs1000.tif" name="lk1000-grau">
         <customproperties/>
@@ -25,7 +25,7 @@
       <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="lk25_grau20170814173302755" source="/opt/geodata/ch.swisstopo.lk25.grau/lk25-grau.vrt" name="lk25-grau">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Checked" id="lk10_grau20170814173306136" source="/opt/geodata/ch.swisstopo.lk10.grau/lk10-grau.vrt" name="lk10-grau">
+      <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="lk10_grau20170814173306136" source="/opt/geodata/ch.swisstopo.lk10.grau/lk10-grau.vrt" name="lk10-grau">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -34,10 +34,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>2605654.12327237939462066</xmin>
-      <ymin>1226834.97344569629058242</ymin>
-      <xmax>2608604.2732970523647964</xmax>
-      <ymax>1228828.3180569619871676</ymax>
+      <xmin>2608726.77106642723083496</xmin>
+      <ymin>1226491.20006662770174444</ymin>
+      <xmax>2608917.02100268937647343</xmax>
+      <ymax>1226619.74732085852883756</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -68,7 +68,7 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendgroup open="true" checked="Qt::PartiallyChecked" name="ch.so.agi.hintergrundkarte-grau">
+    <legendgroup open="true" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-grau">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="lk1000-grau" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="kgrs100020170813153019438" visible="0"/>
@@ -99,9 +99,9 @@
           <legendlayerfile isInOverview="0" layerid="lk25_grau20170814173302755" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="lk10-grau" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="lk10-grau" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="lk10_grau20170814173306136" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="lk10_grau20170814173306136" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>

@@ -19,13 +19,16 @@
       <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="lk100_grau20170814173251055" source="/opt/geodata/ch.swisstopo.lk100.grau/lk100-grau.vrt" name="lk100-grau">
         <customproperties/>
       </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="wms" checked="Qt::Checked" id="Amtliche_Vermessung__schwarz_weiss_20170814184753990" source="contextualWMSLegend=0&amp;crs=EPSG:2056&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=Amtliche%20Vermessung%20(schwarz-weiss)&amp;styles=&amp;url=http://geoweb.so.ch/wms/grundbuchplan-nf" name="Amtliche Vermessung (schwarz-weiss)">
+        <customproperties/>
+      </layer-tree-layer>
       <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="lk50_grau20170814173257693" source="/opt/geodata/ch.swisstopo.lk50.grau/lk50-grau.vrt" name="lk50-grau">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="lk25_grau20170814173302755" source="/opt/geodata/ch.swisstopo.lk25.grau/lk25-grau.vrt" name="lk25-grau">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Checked" id="lk10_grau20170814173306136" source="/opt/geodata/ch.swisstopo.lk10.grau/lk10-grau.vrt" name="lk10-grau">
+      <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="lk10_grau20170814173306136" source="/opt/geodata/ch.swisstopo.lk10.grau/lk10-grau.vrt" name="lk10-grau">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -34,10 +37,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>2605654.12327237939462066</xmin>
-      <ymin>1226834.97344569629058242</ymin>
-      <xmax>2608604.2732970523647964</xmax>
-      <ymax>1228828.3180569619871676</ymax>
+      <xmin>2608726.77106642723083496</xmin>
+      <ymin>1226491.20006662770174444</ymin>
+      <xmax>2608917.02100268937647343</xmax>
+      <ymax>1226619.74732085852883756</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -65,6 +68,7 @@
       <item>lk50_grau20170814173257693</item>
       <item>lk25_grau20170814173302755</item>
       <item>lk10_grau20170814173306136</item>
+      <item>Amtliche_Vermessung__schwarz_weiss_20170814184753990</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -89,6 +93,11 @@
           <legendlayerfile isInOverview="0" layerid="lk100_grau20170814173251055" visible="0"/>
         </filegroup>
       </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Amtliche Vermessung (schwarz-weiss)" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="Amtliche_Vermessung__schwarz_weiss_20170814184753990" visible="1"/>
+        </filegroup>
+      </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="lk50-grau" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="lk50_grau20170814173257693" visible="0"/>
@@ -99,14 +108,59 @@
           <legendlayerfile isInOverview="0" layerid="lk25_grau20170814173302755" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="lk10-grau" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="lk10-grau" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="lk10_grau20170814173306136" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="lk10_grau20170814173306136" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
   </legend>
   <projectlayers>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>2590000</xmin>
+        <ymin>1210000</ymin>
+        <xmax>2650000</xmax>
+        <ymax>1270000</ymax>
+      </extent>
+      <id>Amtliche_Vermessung__schwarz_weiss_20170814184753990</id>
+      <datasource>contextualWMSLegend=0&amp;crs=EPSG:2056&amp;dpiMode=7&amp;featureCount=10&amp;format=image/png&amp;layers=Amtliche%20Vermessung%20(schwarz-weiss)&amp;styles=&amp;url=http://geoweb.so.ch/wms/grundbuchplan-nf</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Amtliche Vermessung (schwarz-weiss)</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>47</srsid>
+          <srid>2056</srid>
+          <authid>EPSG:2056</authid>
+          <description>CH1903+ / LV95</description>
+          <projectionacronym>somerc</projectionacronym>
+          <ellipsoidacronym>bessel</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Html"/>
+      </customproperties>
+      <provider>wms</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
+          <rasterTransparency/>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
     <maplayer minimumScale="10000" maximumScale="350000" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
         <xmin>2480000</xmin>
