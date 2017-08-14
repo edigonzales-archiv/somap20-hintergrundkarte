@@ -41,7 +41,7 @@ resource "aws_volume_attachment" "ebs_att" {
 resource "aws_instance" "qgis-gis-server" {
   availability_zone = "eu-central-1a"    
   ami = "ami-1e339e71" 
-  instance_type = "t2.micro"
+  instance_type = "t2.medium"
   key_name = "aws-demo"
   vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
   user_data = "${file("qgis-gis-server.conf")}"
