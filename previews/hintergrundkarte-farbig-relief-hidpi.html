@@ -27,7 +27,7 @@
   <div id="map" class="map"></div>
   <script type="text/javascript">
 
-    var IP = '52.59.250.194';
+    var IP = '35.158.92.56';
 
     if (proj4) {
         proj4.defs("EPSG:2056", "+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs");
@@ -39,133 +39,102 @@
     projection.setExtent([2420000, 130000, 2900000, 1350000]);
     var projectionExtent = projection.getExtent();
 
-    /*
-    * Use a different approach with ol.layer.Group
-    * for testing. Scale dependency is on the client
-    * side.
-    * https://github.com/edigonzales/somap3/blob/master/index.html
-    */
-
-    /*
-    * What is our extent?! 
-    */
-
-
-
+    var viewExtent = [2570000,1210000, 2667000,1267000];
 
     var layers = [
-        /*
-        new ol.layer.Image({
-            extent: [2420000, 1030000, 2900000, 1350000],
-            source: new ol.source.ImageWMS({
-            url: 'http://35.158.123.43/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
-            params: {'LAYERS': 'ch.so.agi.hintergrundkarte-grau'},
-            ratio: 1
-            })
-        })
-        */
-        /*
-        new ol.layer.Tile({
-            extent: [2420000, 1030000, 2900000, 1350000],
-            source: new ol.source.TileWMS({
-                url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
-                hidpi: true,
-                params: {'LAYERS': 'ch.so.agi.hintergrundkarte-grau', 'TILED': true},
-                serverType: 'qgis'
-            })
-        })
-        */
         new ol.layer.Group({
+            extent: viewExtent,
             layers: [
                 new ol.layer.Tile({
                     minResolution: 79.37499995994430,    
-                    extent: [2420000, 1030000, 2900000, 1350000],
                     source: new ol.source.TileWMS({
                         url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
                         hidpi: true,
-                        params: {'LAYERS': 'lk1000-grau', 'TILED': true},
+                        params: {'LAYERS': 'lk1000-farbig-relief', 'TILED': true},
                         serverType: 'qgis'
                     })
                 }),
                 new ol.layer.Tile({
                     maxResolution: 79.37499995994430,
                     minResolution: 39.68749997997210,
-                    extent: [2420000, 1030000, 2900000, 1350000],
                     source: new ol.source.TileWMS({
                         url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
                         hidpi: true,
-                        params: {'LAYERS': 'lk500-grau', 'TILED': true},
+                        params: {'LAYERS': 'lk500-farbig-relief', 'TILED': true},
                         serverType: 'qgis'
                     })
                 }),
                 new ol.layer.Tile({
                     maxResolution: 39.68749997997210,
                     minResolution: 19.84374999000010,
-                    extent: [2420000, 1030000, 2900000, 1350000],
                     source: new ol.source.TileWMS({
                         url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
                         hidpi: true,
-                        params: {'LAYERS': 'lk200-grau', 'TILED': true},
+                        params: {'LAYERS': 'lk200-farbig-relief', 'TILED': true},
                         serverType: 'qgis'
                     })
                 }),
                 new ol.layer.Tile({
                     maxResolution: 19.84374999000010,
                     minResolution: 10.58333332800380,
-                    extent: [2420000, 1030000, 2900000, 1350000],
                     source: new ol.source.TileWMS({
                         url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
                         hidpi: true,
-                        params: {'LAYERS': 'lk100-grau', 'TILED': true},
+                        params: {'LAYERS': 'lk100-farbig-relief', 'TILED': true},
                         serverType: 'qgis'
                     })
                 }),
                 new ol.layer.Tile({
                     maxResolution: 10.58333332800380,
                     minResolution: 5.29166666400188,
-                    extent: [2420000, 1030000, 2900000, 1350000],
                     source: new ol.source.TileWMS({
                         url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
                         hidpi: true,
-                        params: {'LAYERS': 'lk50-grau', 'TILED': true},
+                        params: {'LAYERS': 'lk50-farbig-relief', 'TILED': true},
                         serverType: 'qgis'
                     })
                 }),
                 new ol.layer.Tile({
                     maxResolution: 5.29166666400188,
                     minResolution: 3.30729166499068,
-                    extent: [2420000, 1030000, 2900000, 1350000],
                     source: new ol.source.TileWMS({
                         url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
                         hidpi: true,
-                        params: {'LAYERS': 'lk25-grau', 'TILED': true},
+                        params: {'LAYERS': 'lk25-farbig-relief', 'TILED': true},
                         serverType: 'qgis'
                     })
                 }),
                 new ol.layer.Tile({
                     maxResolution: 3.30729166499068,
                     minResolution: 1.32291666659827,
-                    extent: [2420000, 1030000, 2900000, 1350000],
                     source: new ol.source.TileWMS({
                         url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
                         hidpi: true,
-                        params: {'LAYERS': 'lk10-grau', 'TILED': true},
+                        params: {'LAYERS': 'lk10-farbig-relief', 'TILED': true},
                         serverType: 'qgis'
                     })
                 }),
                 new ol.layer.Tile({
                     maxResolution: 1.32291666659827,
-                    extent: [2420000, 1030000, 2900000, 1350000],
                     source: new ol.source.TileWMS({
                         url: 'https://geoweb.so.ch/wms/grundbuchplan-nf',
                         hidpi: true,
-                        params: {'LAYERS': 'Amtliche Vermessung (schwarz-weiss)', 'TILED': true},
+                        params: {'LAYERS': 'Amtliche Vermessung (farbig)', 'TILED': true},
                         serverType: 'qgis'
                     })
                 })                                  
             ]
-        })
-
+        }),
+        /*
+        new ol.layer.Image({
+            extent: viewExtent,
+            source: new ol.source.ImageWMS({
+                url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
+                params: {'LAYERS': 'kantonsgrenze-maske'},
+                ratio: 1.5
+            })
+        })  
+        */   
     ];
 
     var map = new ol.Map({
