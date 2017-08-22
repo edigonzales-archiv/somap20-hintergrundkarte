@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="HandheldFriendly" content="true" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.0.1/ol.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <style  type="text/css">
+    html, body, .map {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.10/proj4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.0.1/ol.js"></script>
+  <title>Hintergrundkarte WMS</title>
+</head>
+<body>
+  <div id="map" class="map"></div>
+  <script type="text/javascript">
+
+    var IP = '35.159.16.67';
+
+    if (proj4) {
+        proj4.defs("EPSG:2056", "+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs");
+    }
+
+    var projection = ol.proj.get('EPSG:2056');
+
+    // We have to set the extent!
+    projection.setExtent([2420000, 130000, 2900000, 1350000]);
+    var projectionExtent = projection.getExtent();
+
+    var viewExtent = [2570000,1210000, 2667000,1267000];
+
+    var layers = [
+        new ol.layer.Group({
+            extent: viewExtent,
+            layers: [
+                new ol.layer.Image({
+                    minResolution: 79.37499995994430,    
+                    source: new ol.source.ImageWMS({
+                        url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
+                        hidpi: true,
+                        params: {'LAYERS': 'lk1000-farbig-relief', 'FORMAT': 'image/jpeg', 'TILED': false},
+                        ratio: 1.5
+                    })
+                }),
+                new ol.layer.Image({
+                    maxResolution: 79.37499995994430,
+                    minResolution: 39.68749997997210,
+                    source: new ol.source.ImageWMS({
+                        url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
+                        hidpi: true,
+                        params: {'LAYERS': 'lk500-farbig-relief', 'FORMAT': 'image/jpeg', 'TILED': false},
+                        ratio: 1.5
+                    })
+                }),
+                new ol.layer.Image({
+                    maxResolution: 39.68749997997210,
+                    minResolution: 19.84374999000010,
+                    source: new ol.source.ImageWMS({
+                        url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
+                        hidpi: true,
+                        params: {'LAYERS': 'lk200-farbig-relief', 'FORMAT': 'image/jpeg', 'TILED': false},
+                        ratio: 1.5
+                    })
+                }),
+                new ol.layer.Image({
+                    maxResolution: 19.84374999000010,
+                    minResolution: 10.58333332800380,
+                    source: new ol.source.ImageWMS({
+                        url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
+                        hidpi: true,
+                        params: {'LAYERS': 'lk100-farbig-relief', 'FORMAT': 'image/jpeg', 'TILED': false},
+                        ratio: 1.5
+                    })
+                }),
+                new ol.layer.Image({
+                    maxResolution: 10.58333332800380,
+                    minResolution: 5.29166666400188,
+                    source: new ol.source.ImageWMS({
+                        url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
+                        hidpi: true,
+                        params: {'LAYERS': 'lk50-farbig-relief', 'FORMAT': 'image/jpeg', 'TILED': false},
+                        ratio: 1.5
+                    })
+                }),
+                new ol.layer.Image({
+                    maxResolution: 5.29166666400188,
+                    minResolution: 3.30729166499068,
+                    source: new ol.source.ImageWMS({
+                        url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
+                        hidpi: true,
+                        params: {'LAYERS': 'lk25-farbig-relief', 'FORMAT': 'image/jpeg', 'TILED': false},
+                        ratio: 1.5
+                    })
+                }),
+                new ol.layer.Image({
+                    maxResolution: 3.30729166499068,
+                    minResolution: 1.32291666659827,
+                    source: new ol.source.ImageWMS({
+                        url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
+                        hidpi: true,
+                        params: {'LAYERS': 'lk10-farbig-relief', 'FORMAT': 'image/jpeg', 'TILED': false},
+                        ratio: 1.5
+                    })
+                }),
+                new ol.layer.Image({
+                    maxResolution: 1.32291666659827,
+                    source: new ol.source.ImageWMS({
+                        url: 'https://geoweb.so.ch/wms/grundbuchplan-nf',
+                        hidpi: true,
+                        params: {'LAYERS': 'Amtliche Vermessung (farbig)', 'FORMAT': 'image/jpeg', 'TILED': false},
+                        ratio: 1.5
+                    })
+                })                                  
+            ]
+        }),
+        /*
+        new ol.layer.Image({
+            extent: viewExtent,
+            source: new ol.source.ImageWMS({
+                url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
+                params: {'LAYERS': 'kantonsgrenze-maske'},
+                ratio: 1.5
+            })
+        })  
+        */   
+    ];
+
+    var map = new ol.Map({
+        controls: ol.control.defaults().extend([
+            new ol.control.FullScreen(),
+            new ol.control.ScaleLine()
+        ]),
+        units: 'm',
+        logo: false,
+        target: document.getElementById('map'),
+        layers: layers,
+        view: new ol.View({
+            projection: projection,
+            center: [2618000, 1236700],
+            zoom: 1,
+            //resolutions: [4000, 2000, 1000, 500, 250, 100, 50, 20, 10, 5, 2.5, 1, 0.5, 0.25, 0.1, 0.05] // eCH-0056
+            resolutions: [132.29166659990700, 79.37499995994430, 52.91666663996280, 39.68749997997210, 26.45833331998140, 19.84374999000010, 13.22916665999070, 10.58333332800380, 7.93749999598883, 6.61458333000935, 5.29166666400188, 3.96874999799441, 3.30729166499068, 2.64583333219974, 1.98437499989881, 1.32291666659827, 0.79374999959888, 0.66145833330054, 0.52916666669979, 0.39687499979944, 0.26458333329977, 0.19843749990000, 0.13229166669987, 0.07937499989997, 0.06614583330009, 0.05291666659998, 0.03968749989986, 0.02645833329999, 0.01322916670000] // Kt. Zug (nice scales) + some more
+
+        })
+    });
+
+
+  </script>
+</body>
+</html>
