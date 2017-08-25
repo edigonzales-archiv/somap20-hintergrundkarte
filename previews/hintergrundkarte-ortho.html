@@ -65,6 +65,7 @@
         }),
         new ol.layer.Image({
             extent: viewExtent,
+            minResolution: 10.58333332800380,
             source: new ol.source.ImageWMS({
                 url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
                 params: {'LAYERS': 'kantonsgrenze-weiss'},

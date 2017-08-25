@@ -87,10 +87,10 @@
                     minResolution: 79.37499995994430,    
                     source: new ol.source.ImageWMS({
                         url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
-                        params: {'LAYERS': 'lk1000-grau', 'FORMAT': 'image/jpeg', 'TILED': false},
+                        params: {'LAYERS': 'lk1000-relief,lk1000-grau', 'FORMAT': 'image/jpeg', 'TILED': false},
                         ratio: 1.5
                     })
-                }),
+                }),           
                 new ol.layer.Image({
                     maxResolution: 79.37499995994430,
                     minResolution: 39.68749997997210,
@@ -164,7 +164,7 @@
         }),
         new ol.layer.Image({
             extent: viewExtent,
-            minResolution: 10.58333332800380,                        
+            minResolution: 10.58333332800380,            
             source: new ol.source.ImageWMS({
                 url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
                 params: {'LAYERS': 'kantonsgrenze-orange'},
