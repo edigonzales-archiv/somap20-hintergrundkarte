@@ -76,10 +76,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>2550519.0556857893243432</xmin>
-      <ymin>1169870.09744709543883801</ymin>
-      <xmax>2724894.96741538587957621</xmax>
-      <ymax>1287691.65942655317485332</ymax>
+      <xmin>2581249.84455140074715018</xmin>
+      <ymin>1199733.25474234810099006</ymin>
+      <xmax>2668437.80041619902476668</xmax>
+      <ymax>1258644.03573207696899772</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -3857,12 +3857,12 @@ def my_form_open(dialog, layer, feature):
         <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
           <rasterTransparency/>
           <contrastEnhancement>
-            <minValue>141</minValue>
-            <maxValue>252</maxValue>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
             <algorithm>NoEnhancement</algorithm>
           </contrastEnhancement>
         </rasterrenderer>
-        <brightnesscontrast brightness="75" contrast="0"/>
+        <brightnesscontrast brightness="75" contrast="-25"/>
         <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
         <rasterresampler maxOversampling="4" zoomedOutResampler="bilinear" zoomedInResampler="bilinear"/>
       </pipe>
