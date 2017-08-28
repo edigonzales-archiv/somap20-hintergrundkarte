@@ -27,7 +27,7 @@
   <div id="map" class="map"></div>
   <script type="text/javascript">
 
-    var IP = '54.93.159.168';
+    var IP = '35.159.16.239';
 
     if (proj4) {
         proj4.defs("EPSG:2056", "+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs");
@@ -39,14 +39,14 @@
     projection.setExtent([2420000, 130000, 2900000, 1350000]);
     var projectionExtent = projection.getExtent();
 
-    var viewExtent = [2570000,1210000, 2667000,1267000];
-
+    var viewExtent = [2570000,1208000, 2667000,1268000];
+    
     var layers = [
         new ol.layer.Group({
             extent: viewExtent,
             layers: [
                 new ol.layer.Image({
-                    minResolution: 79.37499995994430,    
+                    minResolution: 52.91666663996280,    
                     source: new ol.source.ImageWMS({
                         url: 'http://' + IP + '/cgi-bin/qgis_mapserv.fcgi?map=/tmp/somap20-hintergrundkarte/qgis/hintergrundkarte.qgs',
                         params: {'LAYERS': 'landsat', 'FORMAT': 'image/jpeg', 'TRANSPARENT': 'false'},
@@ -54,7 +54,7 @@
                     })
                 }),
                 new ol.layer.Image({
-                    maxResolution: 79.37499995994430,
+                    maxResolution: 52.91666663996280,
                     source: new ol.source.ImageWMS({
                         url: 'http://geoweb.so.ch/wms/sogis_orthofoto.wms',
                         params: {'LAYERS': 'Ortho_SO', 'FORMAT': 'image/jpeg', 'TRANSPARENT': 'false'},
