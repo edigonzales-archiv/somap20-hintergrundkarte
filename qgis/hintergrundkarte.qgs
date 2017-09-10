@@ -8,7 +8,7 @@
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="kantonsgrenze20170815130631675" source="/opt/geodata/ch.so.agi.kantonsgrenze/kantonsgrenze.shp" name="kantonsgrenze-orange">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="kantonsgrenze20170815123945712" source="/opt/geodata/ch.so.agi.kantonsgrenze/kantonsgrenze.shp" name="kantonsgrenze-weiss">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="kantonsgrenze20170815123945712" source="/opt/geodata/ch.so.agi.kantonsgrenze/kantonsgrenze.shp" name="kantonsgrenze-weiss">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="kantonsgrenze_weiss_copy20170815133109520" source="/opt/geodata/ch.so.agi.kantonsgrenze/kantonsgrenze.shp" name="kantonsgrenze-maske">
@@ -17,9 +17,6 @@
     <layer-tree-group expanded="1" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-grau">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="kgrs100020170813153019438" source="/opt/geodata/ch.swisstopo.lk1000.grau/kgrs1000.tif" name="lk1000-grau">
-        <customproperties/>
-      </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="reli1000_hell20170828044923010" source="/home/ubuntu/reli1000-hell.tif" name="reli1000-hell">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="reli100020170825133930731" source="/opt/geodata/ch.swisstopo.lk1000.relief/reli1000.tif" name="lk1000-relief">
@@ -44,13 +41,13 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-ortho">
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="ch.so.agi.hintergrundkarte-ortho">
       <customproperties/>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="LandsatMos2520170815130035508" source="/opt/geodata/ch.swisstopo.landsat/LandsatMos25.tif" name="landsat">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="LandsatMos2520170815130035508" source="/opt/geodata/ch.swisstopo.landsat/LandsatMos25.tif" name="landsat">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="ch.so.agi.hintergrundkarte-farbig-relief">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-farbig-relief">
       <customproperties/>
       <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="krel100020170815132513469" source="/opt/geodata/ch.swisstopo.lk1000.farbig-relief/krel1000.tif" name="lk1000-farbig-relief">
         <customproperties/>
@@ -67,7 +64,7 @@
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="lk50_farbig_relief20170815132405731" source="/opt/geodata/ch.swisstopo.lk50.farbig-relief/lk50-farbig-relief.vrt" name="lk50-farbig-relief">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="lk25_farbig_relief20170815132345215" source="/opt/geodata/ch.swisstopo.lk25.farbig-relief/lk25-farbig-relief.vrt" name="lk25-farbig-relief">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="lk25_farbig_relief20170815132345215" source="/opt/geodata/ch.swisstopo.lk25.farbig-relief/lk25-farbig-relief.vrt" name="lk25-farbig-relief">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="lk10_farbig_relief20170815132945294" source="/opt/geodata/ch.swisstopo.lk10.farbig-relief/lk10-farbig-relief.vrt" name="lk10-farbig-relief">
@@ -79,10 +76,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>2605973.60458825202658772</xmin>
-      <ymin>1229587.53302011638879776</ymin>
-      <xmax>2614421.17025696812197566</xmax>
-      <ymax>1235295.91844260552898049</ymax>
+      <xmin>2587403.52488546911627054</xmin>
+      <ymin>1218041.688532505184412</ymin>
+      <xmax>2621193.78756033722311258</xmax>
+      <ymax>1240875.23022246733307838</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -122,7 +119,6 @@
       <item>lk10_farbig_relief20170815132945294</item>
       <item>kantonsgrenze_weiss_copy20170815133109520</item>
       <item>reli100020170825133930731</item>
-      <item>reli1000_hell20170828044923010</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -131,9 +127,9 @@
         <legendlayerfile isInOverview="0" layerid="kantonsgrenze20170815130631675" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="kantonsgrenze-weiss" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="kantonsgrenze-weiss" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="kantonsgrenze20170815123945712" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="kantonsgrenze20170815123945712" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="kantonsgrenze-maske" showFeatureCount="0">
@@ -145,11 +141,6 @@
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="lk1000-grau" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="kgrs100020170813153019438" visible="0"/>
-        </filegroup>
-      </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="reli1000-hell" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="reli1000_hell20170828044923010" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="lk1000-relief" showFeatureCount="0">
@@ -188,14 +179,14 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-ortho">
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="landsat" showFeatureCount="0">
+    <legendgroup open="true" checked="Qt::Checked" name="ch.so.agi.hintergrundkarte-ortho">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="landsat" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="LandsatMos2520170815130035508" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="LandsatMos2520170815130035508" visible="1"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::PartiallyChecked" name="ch.so.agi.hintergrundkarte-farbig-relief">
+    <legendgroup open="true" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-farbig-relief">
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="lk1000-farbig-relief" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="krel100020170815132513469" visible="0"/>
@@ -221,9 +212,9 @@
           <legendlayerfile isInOverview="0" layerid="lk50_farbig_relief20170815132405731" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="lk25-farbig-relief" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="lk25-farbig-relief" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="lk25_farbig_relief20170815132345215" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="lk25_farbig_relief20170815132345215" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="lk10-farbig-relief" showFeatureCount="0">
@@ -678,7 +669,11 @@
         </edittype>
       </edittypes>
       <renderer-v2 forceraster="0" preprocessing="0" type="invertedPolygonRenderer" enableorderby="0">
-        <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
+          <rules key="{e826f8b2-1fb4-42b0-a716-6f907f6da190}">
+            <rule scalemaxdenom="1000000" key="{1787a3ad-3088-4887-923d-22aa77cd77de}" symbol="0" scalemindenom="50000"/>
+            <rule scalemaxdenom="50000" key="{6366503a-454d-4c8a-9a83-617b2aa15d6d}" symbol="1" scalemindenom="1"/>
+          </rules>
           <symbols>
             <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
               <layer pass="0" class="SimpleFill" locked="0">
@@ -729,9 +724,26 @@
                 <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
               </layer>
             </symbol>
+            <symbol alpha="1" clip_to_extent="1" type="fill" name="1">
+              <layer pass="0" class="SimpleLine" locked="0">
+                <prop k="capstyle" v="square"/>
+                <prop k="customdash" v="5;2"/>
+                <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="customdash_unit" v="MM"/>
+                <prop k="draw_inside_polygon" v="0"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="line_color" v="255,255,255,166"/>
+                <prop k="line_style" v="solid"/>
+                <prop k="line_width" v="0.6"/>
+                <prop k="line_width_unit" v="MM"/>
+                <prop k="offset" v="0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="use_custom_dash" v="0"/>
+                <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+              </layer>
+            </symbol>
           </symbols>
-          <rotation/>
-          <sizescale scalemethod="diameter"/>
         </renderer-v2>
       </renderer-v2>
       <labeling type="simple"/>
@@ -1034,7 +1046,10 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <renderer-v2 forceraster="0" preprocessing="0" type="invertedPolygonRenderer" enableorderby="0">
-        <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
+          <rules key="{de2768ff-ea4d-4503-aa80-b67d67c9d8b4}">
+            <rule scalemaxdenom="1000000" key="{76d24b68-698d-427c-ad8a-7b7ff8b037f3}" symbol="0" scalemindenom="50000"/>
+          </rules>
           <symbols>
             <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
               <layer pass="0" class="SimpleFill" locked="0">
@@ -1086,8 +1101,6 @@ def my_form_open(dialog, layer, feature):
               </layer>
             </symbol>
           </symbols>
-          <rotation/>
-          <sizescale scalemethod="diameter"/>
         </renderer-v2>
       </renderer-v2>
       <labeling type="simple"/>
@@ -3875,54 +3888,6 @@ def my_form_open(dialog, layer, feature):
         <brightnesscontrast brightness="75" contrast="-25"/>
         <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
         <rasterresampler maxOversampling="4" zoomedOutResampler="bilinear" zoomedInResampler="bilinear"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <extent>
-        <xmin>2317000</xmin>
-        <ymin>913000</ymin>
-        <xmax>3057000</xmax>
-        <ymax>1413000</ymax>
-      </extent>
-      <id>reli1000_hell20170828044923010</id>
-      <datasource>/home/ubuntu/reli1000-hell.tif</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>reli1000-hell</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>47</srsid>
-          <srid>2056</srid>
-          <authid>EPSG:2056</authid>
-          <description>CH1903+ / LV95</description>
-          <projectionacronym>somerc</projectionacronym>
-          <ellipsoidacronym>bessel</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Value"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-        <noDataList bandNo="2" useSrcNoData="0"/>
-        <noDataList bandNo="3" useSrcNoData="0"/>
-        <noDataList bandNo="4" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="4" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
-          <rasterTransparency/>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>

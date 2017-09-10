@@ -5,21 +5,21 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="kantonsgrenze20170815130631675" source="/opt/geodata/ch.so.agi.kantonsgrenze/kantonsgrenze.shp" name="kantonsgrenze-orange">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="kantonsgrenze20170815130631675" source="/opt/geodata/ch.so.agi.kantonsgrenze/kantonsgrenze.shp" name="kantonsgrenze-orange">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="kantonsgrenze20170815123945712" source="/opt/geodata/ch.so.agi.kantonsgrenze/kantonsgrenze.shp" name="kantonsgrenze-weiss">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="kantonsgrenze20170815123945712" source="/opt/geodata/ch.so.agi.kantonsgrenze/kantonsgrenze.shp" name="kantonsgrenze-weiss">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="kantonsgrenze_weiss_copy20170815133109520" source="/opt/geodata/ch.so.agi.kantonsgrenze/kantonsgrenze.shp" name="kantonsgrenze-maske">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="ch.so.agi.hintergrundkarte-grau">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-grau">
       <customproperties/>
-      <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Checked" id="kgrs100020170813153019438" source="/opt/geodata/ch.swisstopo.lk1000.grau/kgrs1000.tif" name="lk1000-grau">
+      <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="kgrs100020170813153019438" source="/opt/geodata/ch.swisstopo.lk1000.grau/kgrs1000.tif" name="lk1000-grau">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="reli100020170825133930731" source="/opt/geodata/ch.swisstopo.lk1000.relief/reli1000.tif" name="lk1000-relief">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="reli100020170825133930731" source="/opt/geodata/ch.swisstopo.lk1000.relief/reli1000.tif" name="lk1000-relief">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Unchecked" id="PK500_LV95_KGRS_Mosaic_201620170813131710275" source="/opt/geodata/ch.swisstopo.lk500.grau/PK500_LV95_KGRS_Mosaic_2016.tif" name="lk500-grau">
@@ -41,9 +41,9 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-ortho">
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="ch.so.agi.hintergrundkarte-ortho">
       <customproperties/>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="LandsatMos2520170815130035508" source="/opt/geodata/ch.swisstopo.landsat/LandsatMos25.tif" name="landsat">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="LandsatMos2520170815130035508" source="/opt/geodata/ch.swisstopo.landsat/LandsatMos25.tif" name="landsat">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -76,10 +76,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>2581249.84455140074715018</xmin>
-      <ymin>1199733.25474234810099006</ymin>
-      <xmax>2668437.80041619902476668</xmax>
-      <ymax>1258644.03573207696899772</ymax>
+      <xmin>2566653.75225746491923928</xmin>
+      <ymin>1205103.15050701540894806</ymin>
+      <xmax>2634234.27760720113292336</xmax>
+      <ymax>1250770.23388693225570023</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -122,14 +122,14 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="kantonsgrenze-orange" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="kantonsgrenze-orange" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="kantonsgrenze20170815130631675" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="kantonsgrenze20170815130631675" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="kantonsgrenze-weiss" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="kantonsgrenze-weiss" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="kantonsgrenze20170815123945712" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="kantonsgrenze20170815123945712" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="kantonsgrenze-maske" showFeatureCount="0">
@@ -137,15 +137,15 @@
         <legendlayerfile isInOverview="0" layerid="kantonsgrenze_weiss_copy20170815133109520" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="true" checked="Qt::PartiallyChecked" name="ch.so.agi.hintergrundkarte-grau">
-      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="lk1000-grau" showFeatureCount="0">
+    <legendgroup open="true" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-grau">
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="lk1000-grau" showFeatureCount="0">
         <filegroup open="false" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="kgrs100020170813153019438" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="kgrs100020170813153019438" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="lk1000-relief" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="lk1000-relief" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="reli100020170825133930731" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="reli100020170825133930731" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="lk500-grau" showFeatureCount="0">
@@ -179,10 +179,10 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="ch.so.agi.hintergrundkarte-ortho">
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="landsat" showFeatureCount="0">
+    <legendgroup open="true" checked="Qt::Checked" name="ch.so.agi.hintergrundkarte-ortho">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="landsat" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="LandsatMos2520170815130035508" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="LandsatMos2520170815130035508" visible="1"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
@@ -225,7 +225,7 @@
     </legendgroup>
   </legend>
   <projectlayers>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
         <xmin>2460000</xmin>
         <ymin>1044000</ymin>
@@ -251,6 +251,7 @@
         </spatialrefsys>
       </srs>
       <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
         <property key="identify/format" value="Value"/>
       </customproperties>
       <provider>gdal</provider>
@@ -263,12 +264,12 @@
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+        <rasterrenderer opacity="1" alphaBand="0" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
           <rasterTransparency/>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0"/>
         <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
+        <rasterresampler maxOversampling="2" zoomedOutResampler="bilinear" zoomedInResampler="bilinear"/>
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
@@ -668,7 +669,11 @@
         </edittype>
       </edittypes>
       <renderer-v2 forceraster="0" preprocessing="0" type="invertedPolygonRenderer" enableorderby="0">
-        <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
+          <rules key="{e826f8b2-1fb4-42b0-a716-6f907f6da190}">
+            <rule scalemaxdenom="1000000" key="{1787a3ad-3088-4887-923d-22aa77cd77de}" symbol="0" scalemindenom="50000"/>
+            <rule scalemaxdenom="50000" key="{6366503a-454d-4c8a-9a83-617b2aa15d6d}" symbol="1" scalemindenom="1"/>
+          </rules>
           <symbols>
             <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
               <layer pass="0" class="SimpleFill" locked="0">
@@ -719,9 +724,26 @@
                 <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
               </layer>
             </symbol>
+            <symbol alpha="1" clip_to_extent="1" type="fill" name="1">
+              <layer pass="0" class="SimpleLine" locked="0">
+                <prop k="capstyle" v="square"/>
+                <prop k="customdash" v="5;2"/>
+                <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="customdash_unit" v="MM"/>
+                <prop k="draw_inside_polygon" v="0"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="line_color" v="255,255,255,166"/>
+                <prop k="line_style" v="solid"/>
+                <prop k="line_width" v="0.4"/>
+                <prop k="line_width_unit" v="MM"/>
+                <prop k="offset" v="0"/>
+                <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="use_custom_dash" v="0"/>
+                <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+              </layer>
+            </symbol>
           </symbols>
-          <rotation/>
-          <sizescale scalemethod="diameter"/>
         </renderer-v2>
       </renderer-v2>
       <labeling type="simple"/>
@@ -1024,7 +1046,10 @@ def my_form_open(dialog, layer, feature):
         </edittype>
       </edittypes>
       <renderer-v2 forceraster="0" preprocessing="0" type="invertedPolygonRenderer" enableorderby="0">
-        <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
+          <rules key="{de2768ff-ea4d-4503-aa80-b67d67c9d8b4}">
+            <rule scalemaxdenom="1000000" key="{76d24b68-698d-427c-ad8a-7b7ff8b037f3}" symbol="0" scalemindenom="50000"/>
+          </rules>
           <symbols>
             <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
               <layer pass="0" class="SimpleFill" locked="0">
@@ -1076,8 +1101,6 @@ def my_form_open(dialog, layer, feature):
               </layer>
             </symbol>
           </symbols>
-          <rotation/>
-          <sizescale scalemethod="diameter"/>
         </renderer-v2>
       </renderer-v2>
       <labeling type="simple"/>
